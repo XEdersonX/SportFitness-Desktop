@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBEF08BE-6BDA-41D5-9813-4EE33B028A1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SportFitness</RootNamespace>
+    <AssemblyName>SportFitness</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>Relatório\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cpf.cs" />
+    <Compile Include="model\Acoes.cs" />
+    <Compile Include="model\Cidades.cs" />
+    <Compile Include="model\DAO\AcoesDAO.cs" />
+    <Compile Include="model\DAO\CidadesDAO.cs" />
+    <Compile Include="model\DAO\EstadosDAO.cs" />
+    <Compile Include="model\DAO\ExerciciosDAO.cs" />
+    <Compile Include="model\DAO\FichaDetalheDAO.cs" />
+    <Compile Include="model\DAO\FichaTreinoDAO.cs" />
+    <Compile Include="model\DAO\FrequenciaDAO.cs" />
+    <Compile Include="model\DAO\GrupoMuscularDAO.cs" />
+    <Compile Include="model\DAO\LogsDAO.cs" />
+    <Compile Include="model\DAO\ObjetivoDAO.cs" />
+    <Compile Include="model\DAO\PalavrasProibidasDAO.cs" />
+    <Compile Include="model\DAO\PlanoTreinoDAO.cs" />
+    <Compile Include="model\DAO\TreinosDAO.cs" />
+    <Compile Include="model\Estados.cs" />
+    <Compile Include="model\Exercicios.cs" />
+    <Compile Include="model\FichaDetalhe.cs" />
+    <Compile Include="model\FichaTreino.cs" />
+    <Compile Include="model\Frequencia.cs" />
+    <Compile Include="model\GrupoMuscular.cs" />
+    <Compile Include="model\DAO\NoticiasDAO.cs" />
+    <Compile Include="model\Logs.cs" />
+    <Compile Include="model\Noticias.cs" />
+    <Compile Include="model\Objetivo.cs" />
+    <Compile Include="model\PalavrasProibidas.cs" />
+    <Compile Include="model\PlanoTreino.cs" />
+    <Compile Include="model\TO\AcoesTO.cs" />
+    <Compile Include="model\TO\CidadesTO.cs" />
+    <Compile Include="model\TO\EstadosTO.cs" />
+    <Compile Include="model\TO\ExerciciosTO.cs" />
+    <Compile Include="model\TO\FichaDetalheTO.cs" />
+    <Compile Include="model\TO\FichaTreinoTO.cs" />
+    <Compile Include="model\TO\FrequenciaTO.cs" />
+    <Compile Include="model\TO\GrupoMuscularTO.cs" />
+    <Compile Include="model\TO\LogsTO.cs" />
+    <Compile Include="model\TO\NoticiasTO.cs" />
+    <Compile Include="model\TO\ObjetivoTO.cs" />
+    <Compile Include="model\TO\PalavrasProibidasTO.cs" />
+    <Compile Include="model\TO\PlanoTreinoTO.cs" />
+    <Compile Include="model\TO\TreinosTO.cs" />
+    <Compile Include="model\Treinos.cs" />
+    <Compile Include="sportfitnessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sportfitnessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltAlunos.Designer.cs">
+      <DependentUpon>FrmAltAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltAvaliacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltAvaliacoes.Designer.cs">
+      <DependentUpon>FrmAltAvaliacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltExercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltExercicios.Designer.cs">
+      <DependentUpon>FrmAltExercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltGrupoMuscular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltGrupoMuscular.Designer.cs">
+      <DependentUpon>FrmAltGrupoMuscular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltNoticias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltNoticias.Designer.cs">
+      <DependentUpon>FrmAltNoticias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltObjetivos.Designer.cs">
+      <DependentUpon>FrmAltObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltTreino.Designer.cs">
+      <DependentUpon>FrmAltTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Backup\FrmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Backup\FrmBackup.Designer.cs">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadAvaliacao.Designer.cs">
+      <DependentUpon>FrmCadAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadAlunos.Designer.cs">
+      <DependentUpon>FrmCadAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltTreinadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltTreinadores.Designer.cs">
+      <DependentUpon>FrmAltTreinadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadExercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadExercicios.Designer.cs">
+      <DependentUpon>FrmCadExercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadGrupoMuscular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadGrupoMuscular.Designer.cs">
+      <DependentUpon>FrmCadGrupoMuscular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadNoticias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadNoticias.Designer.cs">
+      <DependentUpon>FrmCadNoticias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadObjetivos.Designer.cs">
+      <DependentUpon>FrmCadObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadTreinadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadTreinadores.Designer.cs">
+      <DependentUpon>FrmCadTreinadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Alt\FrmAltUsuario.Designer.cs">
+      <DependentUpon>FrmAltUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadTreino.Designer.cs">
+      <DependentUpon>FrmCadTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cad\FrmCadUsuario.Designer.cs">
+      <DependentUpon>FrmCadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmFrequencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmFrequencia.Designer.cs">
+      <DependentUpon>FrmFrequencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmGraficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmGraficos.Designer.cs">
+      <DependentUpon>FrmGraficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLoading.Designer.cs">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogs.Designer.cs">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPoliticaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPoliticaSenha.Designer.cs">
+      <DependentUpon>FrmPoliticaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioAlunos.Designer.cs">
+      <DependentUpon>FrmRelatorioAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioTreinadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioTreinadores.Designer.cs">
+      <DependentUpon>FrmRelatorioTreinadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Report\FrmRelatorioUsuarios.Designer.cs">
+      <DependentUpon>FrmRelatorioUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabAvaliacao.Designer.cs">
+      <DependentUpon>FrmTabAvaliacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Alunos.cs" />
+    <Compile Include="model\Avaliacao.cs" />
+    <Compile Include="model\DAO\AlunosDAO.cs" />
+    <Compile Include="model\DAO\AvaliacaoDAO.cs" />
+    <Compile Include="model\DAO\TreinadoresDAO.cs" />
+    <Compile Include="model\DAO\UsuariosDAO.cs" />
+    <Compile Include="model\dbConnection.cs" />
+    <Compile Include="model\Treinadores.cs" />
+    <Compile Include="model\ICadastro.cs" />
+    <Compile Include="model\TO\AlunosTO.cs" />
+    <Compile Include="model\TO\AvaliacaoTO.cs" />
+    <Compile Include="model\TO\TreinadoresTO.cs" />
+    <Compile Include="model\TO\UsuariosTO.cs" />
+    <Compile Include="model\Usuarios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmMenuInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmMenuInicial.Designer.cs">
+      <DependentUpon>FrmMenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabAlunos.Designer.cs">
+      <DependentUpon>FrmTabAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabExercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabExercicios.Designer.cs">
+      <DependentUpon>FrmTabExercicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabGrupoMuscular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabGrupoMuscular.Designer.cs">
+      <DependentUpon>FrmTabGrupoMuscular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabNoticias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabNoticias.Designer.cs">
+      <DependentUpon>FrmTabNoticias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabObjetivos.Designer.cs">
+      <DependentUpon>FrmTabObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabTreinadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabTreinadores.Designer.cs">
+      <DependentUpon>FrmTabTreinadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabTreinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabTreinos.Designer.cs">
+      <DependentUpon>FrmTabTreinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tab\FrmTabUsuarios.Designer.cs">
+      <DependentUpon>FrmTabUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Relatorios\RelatorioAlunos.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioTreinadores.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioUsuarios.rdlc" />
+    <EmbeddedResource Include="View\Alt\FrmAltAlunos.resx">
+      <DependentUpon>FrmAltAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltAvaliacoes.resx">
+      <DependentUpon>FrmAltAvaliacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltExercicios.resx">
+      <DependentUpon>FrmAltExercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltGrupoMuscular.resx">
+      <DependentUpon>FrmAltGrupoMuscular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltNoticias.resx">
+      <DependentUpon>FrmAltNoticias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltObjetivos.resx">
+      <DependentUpon>FrmAltObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltTreino.resx">
+      <DependentUpon>FrmAltTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Backup\FrmBackup.resx">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadAvaliacao.resx">
+      <DependentUpon>FrmCadAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadAlunos.resx">
+      <DependentUpon>FrmCadAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltTreinadores.resx">
+      <DependentUpon>FrmAltTreinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadExercicios.resx">
+      <DependentUpon>FrmCadExercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadGrupoMuscular.resx">
+      <DependentUpon>FrmCadGrupoMuscular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadNoticias.resx">
+      <DependentUpon>FrmCadNoticias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadObjetivos.resx">
+      <DependentUpon>FrmCadObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadTreinadores.resx">
+      <DependentUpon>FrmCadTreinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Alt\FrmAltUsuario.resx">
+      <DependentUpon>FrmAltUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadTreino.resx">
+      <DependentUpon>FrmCadTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cad\FrmCadUsuario.resx">
+      <DependentUpon>FrmCadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmFrequencia.resx">
+      <DependentUpon>FrmFrequencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmGraficos.resx">
+      <DependentUpon>FrmGraficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLoading.resx">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogs.resx">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPoliticaSenha.resx">
+      <DependentUpon>FrmPoliticaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\FrmRelatorioAlunos.resx">
+      <DependentUpon>FrmRelatorioAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\FrmRelatorioTreinadores.resx">
+      <DependentUpon>FrmRelatorioTreinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\FrmRelatorioUsuarios.resx">
+      <DependentUpon>FrmRelatorioUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabAvaliacao.resx">
+      <DependentUpon>FrmTabAvaliacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\FrmMenuInicial.resx">
+      <DependentUpon>FrmMenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabAlunos.resx">
+      <DependentUpon>FrmTabAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabExercicios.resx">
+      <DependentUpon>FrmTabExercicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabGrupoMuscular.resx">
+      <DependentUpon>FrmTabGrupoMuscular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabNoticias.resx">
+      <DependentUpon>FrmTabNoticias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabObjetivos.resx">
+      <DependentUpon>FrmTabObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabTreinadores.resx">
+      <DependentUpon>FrmTabTreinadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabTreinos.resx">
+      <DependentUpon>FrmTabTreinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tab\FrmTabUsuarios.resx">
+      <DependentUpon>FrmTabUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DiagramaClasse.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="sportfitnessDataSet.xsc">
+      <DependentUpon>sportfitnessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sportfitnessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sportfitnessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sportfitnessDataSet.xss">
+      <DependentUpon>sportfitnessDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy-1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

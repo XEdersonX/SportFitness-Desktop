@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SportFitness.model.DAO.AlunosDAO">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAQAAAAAAAABIAAAAAAAEAAA=</HashCode>
+      <FileName>model\DAO\AlunosDAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SportFitness.model.DAO.AvaliacaoDAO" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAQAAAAAAAABAAAAAAAAEAAA=</HashCode>
+      <FileName>model\DAO\AvaliacaoDAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SportFitness.model.TO.AvaliacaoTO" Collapsed="true">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAAFAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAA=</HashCode>
+      <FileName>model\TO\AvaliacaoTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportFitness.model.TO.AlunosTO" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAACABACAAAAAAAACAIAAABAAAAAAAAAGBEgg=</HashCode>
+      <FileName>model\TO\AlunosTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sportFitness.dbConnection" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\dbConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SportFitness.model.Alunos" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\Alunos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportFitness.model.Treinos" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\Treinos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SportFitness.model.DAO.TreinosDAO" Collapsed="true">
+    <Position X="6.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAQAAAAAAAABAAAAAAAAEAAA=</HashCode>
+      <FileName>model\DAO\TreinosDAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SportFitness.model.TO.TreinosTO" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAIAAAIEAAAAAEIAAAAAABAAIAAgAAAA=</HashCode>
+      <FileName>model\TO\TreinosTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
